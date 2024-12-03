@@ -1,0 +1,1033 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo&family=Hind+Siliguri:wght@300;400;500&family=Poppins:wght@200;300;400&family=Zen+Dots&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: "bobblebod";
+    src: url(font/Bobblebod.ttf);
+}
+
+
+.main {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 29, 29);
+    color: white;
+}
+
+.main::-webkit-scrollbar-button{
+    display: none;
+}
+
+.main .landing-page{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.main .landing-page::before{
+    content: '';
+    position: absolute;
+    width: 30%;
+    top: 10%;
+    right: 10%;
+    height: 85%;
+    border-top-right-radius: 30px;
+    background-color: #676767;
+    /* background-color: aqua; */
+}
+
+.main .landing-page .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.landing-page .nav-bar .logo-img {
+    display: flex;
+    align-items: center;
+}
+
+.landing-page .nav-bar .logo-img img{
+   width: 250px;
+}
+
+
+.main .landing-page .nav-bar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+
+.main .landing-page .nav-bar ul li a{
+    font-size: 1.2vw;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+    transition: .3s all ease-out;
+}
+
+.main .landing-page .nav-bar ul li a::after{
+    content: '';
+    background-color: red;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 15px;
+    transition: .5s;
+}
+
+.main .landing-page .nav-bar ul li a:hover::after{
+    width: 80%;
+}
+
+.small-icons{
+    display: none;
+}
+
+@media (max-width:700px) {
+    
+    .main{
+        width: 100%;
+    }
+    .landing-page{
+        height: 100%;
+    }
+    .landing-page::before{
+        display: none;
+    }
+     
+    .landing-page .nav-bar .logo-img img{
+        width: 170px;
+    }
+
+    .main .landing-page .nav-bar ul{
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        width: 250px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: -250px;
+        transition: .5s ease-in-out;
+        z-index: 99;
+    }
+
+    .main .landing-page .nav-bar ul.active{
+        right: 0;
+    }
+
+    .small-icons{
+        display: block;
+    }
+
+
+    .main .landing-page .nav-bar ul li a{
+        font-size: 20px;
+        line-height: 7rem;
+        margin-top: 50px;
+    }
+
+    .main .landing-page .nav-bar ul .small-icons{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+    }
+}
+
+    /* HERO PAGE */
+
+    .container{
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+    }
+
+    .left{
+        width: 40%;
+        padding: 20px 20px;
+    }
+
+    .mobile-img{
+        display: none;
+        overflow: auto;
+    }
+
+    .mobile-img::-webkit-scrollbar{
+        display: none;
+    }
+
+    .sliding-mobile-img{
+         display: flex;
+    }
+
+    .sliding-mobile-img img{
+       width: 100%;
+    }
+
+    
+    .left h5{
+        background-color: red;
+        display: unset;
+        padding: 2px 7px;
+        border-radius: 2px;
+    } 
+    
+    .left .icons{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+    }
+    
+    .left .icons img{
+        width: 55px;
+    }
+    
+
+    .slider-img{
+        margin-top: 20px;
+    }
+
+    .slider-img h2{
+        font-size: 40px;
+    }
+
+    .glimpse{
+        display: flex;
+        overflow: auto;
+        margin-top: 20px;
+    }
+    .title{
+        margin-top: 10px;
+        font-size: 80px;
+        font-family: "bobblebod";
+    }
+    
+    .glimpse img{
+        width:35%;
+        padding-right:40px;
+    }
+
+    .glimpse::-webkit-scrollbar{
+        display: none;
+    }
+    .book-now{
+        margin-top: 50px;
+        font-size: 25px;
+        transition: .5 all ease-in;
+        position: absolute;
+    }
+        
+    .book-now p a{
+        padding: 4px 7px;
+        border-radius: 2px;
+        background-color: red;
+        display: unset;
+        color: white;
+    }
+
+    @media (max-width:700px) {
+        .mobile-img{
+            display: block;
+        }
+
+       .slider-img h1{
+         font-size: 20px;
+       }
+        .left{
+            width: 100%;
+            height: 100%;
+            padding-top: 0;
+        }
+
+        .glimpse img{
+            width: 25%;
+        }
+
+        .left h5{
+            font-size: 10px;
+        }
+        .left .icons img{
+            width: 30px;
+        }
+        .title{
+            font-size: 40px;
+        }
+
+        .left p{
+            font-size: 10px;
+        }
+
+        .book-now{
+            margin-top: 30px;
+        }
+
+        .book-now p a{
+            font-size: 10px;
+        }
+    }
+
+
+    .right{
+        width: 60%;
+        height: 92vh;
+        position: relative;
+    }
+
+    @media (max-width:700px){
+     .right{
+        display: none;
+     }   
+    }
+
+    .right .img_bx{
+        display: flex;
+        overflow: auto;
+    }
+
+    .right .img_bx::-webkit-scrollbar{
+        display: none;
+    }
+
+    .img_bx{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        padding: 20px;
+        overflow-x: auto;
+      }
+      
+      .img_bx::-webkit-scrollbar{
+          display: none;
+      }
+      
+      .img_bx img{
+          width: 35%;
+          margin-right: 50px;
+          filter: blur(1.5px);
+          transition: .3s linear;
+      } 
+      
+      .img_bx img:nth-child(1){
+          width: 75%;
+          filter: blur(0px);
+      } 
+
+      .slide_btns{
+        position: absolute;
+        bottom: 10%;
+        left: 20%;
+        font-size: 20px;
+        color: red;
+      }
+
+      .slide_btns i{
+        background-color: red;
+        padding: 4px 8px;
+        border-radius: 50%;
+        margin-left: 80px;
+        cursor: pointer;
+        color: white;
+      }
+
+
+   /* page-2 */
+
+   .page-2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2vw;
+   }
+
+   .page-2 .row{
+    padding-top: 2.5vw;
+    display: flex;
+    justify-content: space-between;
+   }
+
+   .page-2 h1{
+    font-size: 5vw;
+    font-weight: 600;
+    font-family: "bobblebod";
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+   }
+
+   .page-2 p{
+    padding: 20px;
+    font-size: 1.34vw;
+   }
+
+   .page-2 .motorcycles ul{
+      display: flex;
+   }
+
+   .page-2 .motorcycles ul li{
+    display: flex;
+    align-items: center;
+   }
+
+   .page-2 .motorcycles ul li:nth-child(1){
+    font-size: 30px;
+   }
+
+   
+   .page-2 .motorcycles ul li a{
+       padding: 0 20px;
+       font-size: 20px;
+       border-right: 1px solid white;
+       transition: .3s all ease-in-out;
+       color: white;
+    }
+    
+    @media (max-width:700px) {
+        .page-2 .motorcycles ul li:nth-child(1){
+            font-size: 15px;
+           }
+
+        .page-2 .motorcycles ul li a{
+            font-size: 3px !important;
+        }
+    }
+   .page-2 .motorcycles ul li a:hover{
+    color: red;
+   }
+
+   .bike-col{
+    flex-basis: 32%;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+   }
+
+   .bike-col img{
+    width: 100%;
+    height: 100%;
+   }
+
+   .layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: all ease .9s ;
+   }
+
+    .layer h3{
+    color: black;
+   } 
+
+   .layer:hover{
+    background: rgba(266, 0, 0, 0.7);
+   }
+
+   /* PAGE-3 */
+
+   .page-3{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .page-3 video{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+   }
+
+   .page-3 video:nth-child(2) {
+    display: none;
+   }
+
+   @media (max-width:700px) {
+    .page-3{
+       width: 100%;
+    }
+
+    .page-3 video:nth-child(1) {
+        display: none;
+       }
+    .page-3 video:nth-child(2) {
+        display: block;
+       }
+   }
+
+   .page-4{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 20px;
+    flex-basis: 32%;
+   }
+
+   .page-4 h1{
+    font-size: 70px;
+    font-family: "bobblebod";
+   }
+
+   .page-4 p{
+    font-size: 30px;
+   }
+
+   .page-4 img{
+    width: 100%;
+   }
+
+   .page-4 .bike-images-grid{
+    display: grid;
+    /* margin-top: .5rem; */
+    grid-template-columns: repeat(3 , 1fr);
+   }
+
+   .page-4 .bike-images-col:nth-child(2){
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 1rem;
+   }
+
+   
+   @media (max-width:700px) {
+    .page-4 h1{
+        font-size:30px;
+    }
+    .page-4 h2{
+        font-size: 20px;
+    }
+   }
+
+
+    /* footer-section */
+
+     footer{
+        width: 100%;
+        font-style: 13px;
+        background-color: #d6d6d6;
+     }
+
+     .row-1{
+        padding:20px 0;
+        width: 95%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+     }
+
+     .footer-col{
+        flex-basis: 20%;
+        padding: 10px;
+     }
+
+     .footer-col:nth-child(1){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+     }
+
+     .footer-col ul li a{
+        color: black;
+        line-height: 2rem;
+        transition: .3s ease-in-out;
+     }
+
+     .footer-col ul li a:hover{
+        color: red;
+     }
+
+     .footer-col h3{
+        width: fit-content;
+        margin-bottom: 40px;
+        position: relative;
+     }
+
+     @media (max-width:700px) {
+        .footer-col{
+            flex-basis: 100%;
+        }
+     }
+
+    .line{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        width: 99%;
+        height: .2px;
+        background: rgb(0, 0, 0);
+        opacity: .3;
+        
+    }
+
+
+    
+
+    .copy-right{
+        display: flex;
+        padding: 0 20px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1vw;
+    }
+
+    .copy-right p{
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+    }
+
+    .copy-right .privacy ul{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .copy-right .privacy ul li a{
+        padding: 0 2vw;
+        color: black;
+        font-size: .8vw;
+        border-right: 1px solid rgb(168, 166, 166);
+    }
+
+
+  /* for other pages */
+
+  .main-1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 29, 29);
+    color: white;
+}
+
+.main-1::-webkit-scrollbar-button{
+    display: none;
+}
+
+.main-1 .landing-page{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.main-1 .landing-page .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.landing-page .nav-bar .logo-img {
+    display: flex;
+    align-items: center;
+}
+
+.landing-page .nav-bar .logo-img img{
+   width: 250px;
+}
+
+
+.main-1 .landing-page .nav-bar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+
+.main-1 .landing-page .nav-bar ul li a{
+    font-size: 1.2vw;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+    transition: .3s all ease-out;
+}
+
+.main-1 .landing-page .nav-bar ul li a::after{
+    content: '';
+    background-color: red;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 15px;
+    transition: .5s;
+}
+
+.main-1 .landing-page .nav-bar ul li a:hover::after{
+    width: 80%;
+}
+
+.small-icons{
+    display: none;
+}
+
+@media (max-width:700px) {
+    
+    .main-1{
+        width: 100%;
+    }
+    .landing-page{
+        height: 100%;
+    }
+    .landing-page::before{
+        display: none;
+    }
+     
+    .landing-page .nav-bar .logo-img img{
+        width: 170px;
+    }
+
+    .main-1 .landing-page .nav-bar ul{
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        width: 250px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: -250px;
+        transition: .5s ease-in-out;
+        z-index: 9;
+    }
+
+    .main-1 .landing-page .nav-bar ul.active{
+        right: 0;
+    }
+
+    .small-icons{
+        display: block;
+    }
+
+
+    .main-1 .landing-page .nav-bar ul li a{
+        font-size: 20px;
+        line-height: 7rem;
+        margin-top: 50px;
+    }
+
+    .main-1 .landing-page .nav-bar ul .small-icons{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+    }
+}
+
+
+
+/* for booking page */
+.page-12{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-image: url('Img/banner-book-test-ride.jpg');
+    background-position: cover;
+    background-size: 100%;
+    padding: 50px;
+    background-repeat: no-repeat;
+    color: black;
+    position: relative;
+}
+
+
+.page-12 .container-12{
+    width: 100%;
+    height: 100%;
+    background-color: #e5e3e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-12 .container-12 .row-12{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    width: 90%;
+}
+
+.page-12 .container-12 .col-12{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 32%;
+    margin: auto;
+}
+
+.page-12 .container-12 .col-12 img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 70px;
+}
+
+.page-12 .container-12 .col-12 p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+form{
+    width: 100%;
+}
+
+form .col-12 input,select{
+    padding: 10px 50px;
+    width: 100%;
+    margin: 20px;
+    border: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+}
+
+form .col-12 input::placeholder{
+     opacity: .5;
+     font-weight: 400;
+}
+
+.disclaimer{
+    width: 83%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+.disclaimer .submit{
+    margin:20px 0;
+    display: unset;
+    width: fit-content;
+    border: none;
+    background-color: black;
+    padding: 7px 15px;
+    color: #d6d6d6;
+    border-radius: 5px;
+}
+
+
+@media (max-width:700px) {
+    .page-12{
+      padding: 10px;
+      z-index: 0;
+    }
+
+    .page-12 .container-12 .col-12 img{
+        width: 30px;
+    }
+
+    .page-12 .container-12 .col-12 p{
+        font-size: 6px;
+    }
+
+    .page-12 .container-12 .row-12{
+        width: 100%;
+    }
+  
+     form .page-12 .container-12{
+          width: 100%;
+          height: 100%;
+          background-color: #e5e3e3;
+      }
+
+     .page-12 .container-12 form .col-12{
+        flex-basis: 100%;
+      }
+  }
+
+
+
+/* Contactpage */
+
+
+.page-13{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('Img/contact_us.jpeg');
+    background-position: cover;
+    background-size: 100%;
+    padding: 50px;
+    background-repeat: no-repeat;
+    color: black;
+    position: relative;
+
+}
+
+.page-13 .container-13{
+    width: 100%;
+    height: 100%;
+    background-color: #e5e3e3;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.page-13 .row-13{
+    width: 97%;
+}
+
+.page-13 .container-14{
+    width: 100%;
+    height: 100%;
+    background-color: #e5e3e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-13 .container-14 .row-14{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.page-13 .container-14 .col-14{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 32%;
+    margin: auto;
+}
+
+
+form{
+    width: 100%;
+    overflow: hidden;
+}
+
+form .col-14 input,select,textarea{
+    padding: 10px 50px;
+    width: 100%;
+    margin: 20px;
+    border: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+}
+
+form select,textarea{
+    /* display: flex;
+    align-items: center; */
+    width: 100%;
+}
+
+form .col-14 input::placeholder{
+     opacity: .5;
+     font-weight: 400;
+}
+
+@media (max-width:700px) {
+    .page-13{
+      padding: 10px;
+    }
+
+    .page-13 .container-14 .row-14{
+        width: 100%;
+    }
+  
+     .page-13 form .container-14{
+          width: 100%;
+          height: 100%;
+          background-color: #e5e3e3;
+      }
+
+     .page-13 .container-14 form .col-14{
+        flex-basis: 100%;
+      }
+
+      .page-13 .container-13 .row-13{
+        margin-left: -10px;
+        width: 94%;
+    }
+  }
+
+
+#preloader{
+    height: 100vh;
+   background: url(Img/Arrow_Motorcycle_Loader.gif) #eeeded ;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+#preloader img{
+    width: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
